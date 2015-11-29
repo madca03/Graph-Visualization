@@ -4,11 +4,11 @@ import org.graphstream.stream.file.FileSource;
 import org.graphstream.stream.file.FileSourceFactory;
 import java.util.Iterator;
 
-public class DynamicGraph2 {
+public class DynamicGraph3 {
   private MultiGraph graph;
   private String sourceDGSFile;
 
-  public DynamicGraph2(String sourceDGSFile) {
+  public DynamicGraph3(String sourceDGSFile) {
     System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
     graph = new MultiGraph("Dynamic Graph");
     graph.display(false);
@@ -21,8 +21,16 @@ public class DynamicGraph2 {
   }
 
   public void generateGraph() {
-    addNodesAndEdges();
-    printNodeInfo();
+    while(true) {
+      addNodesAndEdges();
+      printNodeInfo();
+      try {
+        Thread.sleep(5000);
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+          break;
+      }
+    }
   }
 
   public void addNodesAndEdges() {
@@ -83,6 +91,6 @@ public class DynamicGraph2 {
       System.out.println("args: dgs file");
       return;
     }
-    DynamicGraph2 dynamicGraph = new DynamicGraph2(args[0]);
+    DynamicGraph3 dynamicGraph = new DynamicGraph3(args[0]);
   }
 }

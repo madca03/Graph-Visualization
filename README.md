@@ -10,6 +10,11 @@
 javac -cp ".;./lib/*" <Java file>
 ```
 2. run the java program
-```bash
-java -cp ".;./lib/*" <Java Class file>
-```
+  * For StaticGraph2 sample
+    ```bash
+    java -cp ".;./lib/*" StaticGraph2
+    ```
+  * For DynamicGraph2 sample
+    ```bash
+    java -cp ".;./lib/*" DynamicGraph2 graph2.dgs
+    ```

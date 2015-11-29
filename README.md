@@ -15,6 +15,6 @@ javac -cp ".;./lib/*" <Java file>
 java -cp ".;./lib/*" StaticGraph2
 ```
   * For DynamicGraph2 sample
-  ```bash
-  java -cp ".;./lib/*" DynamicGraph2 graph2.dgs
-  ```
+```bash
+java -cp ".;./lib/*" DynamicGraph2 graph2.dgs
+```

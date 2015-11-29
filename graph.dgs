@@ -1,0 +1,21 @@
+DGS003
+"Graph" 0 0
+an "A"
+an "B"
+an "C"
+ae "A_B" "A" > "B"
+ae "B_C" "B" > "C"
+ae "C_A" "C" > "A"
+ce "A_B" label="AB"
+ce "B_C" label="BC"
+ce "C_A" label="CA"
+
+st 2
+an "D"
+an "E"
+ae "B_D" "B" "D"
+ae "C_E" "C" "E"
+ae "D_E" "D" "E"
+de "A_B"
+dn "A"
+st 3

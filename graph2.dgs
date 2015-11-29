@@ -1,0 +1,26 @@
+DGS003
+"Graph2" 0 0
+st 1
+an "A" x=0 y=1 id=1 batteryLevel=30.1 sensors="Humiditiy","Temperature" currentSensorValues=50.2,20.1
+st 1
+an "B" x=1 y=1 id=2 batteryLevel=50.6 sensors="Humidity","Temperature" currentSensorValues=80.1,12.3
+st 1
+an "C" x=-1 y=-1 id=3 batteryLevel=60.4 sensors="Humidity","Temperature" currentSensorValues=89.1,43.6
+st 2
+ae "A_B" "A" > "B"
+ce "A_B" label="AB"
+st 2
+ae "B_C" "B" > "C"
+ce "B_C" label="BC"
+st 2
+ae "C_A" "C" > "A"
+ce "C_A" label="CA"
+st 2
+ae "B_A" "B" > "A"
+ce "B_A" label="BA"
+st 2
+ae "C_B" "C" > "B"
+ce "C_B" label="CB"
+st 2
+ae "A_C" "A" > "C"
+ce "A_C" label="AC"
